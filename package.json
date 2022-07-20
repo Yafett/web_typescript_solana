@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Yafett.github.io/web_learn_react_solana/",
+  "homepage": "http://Yafett.github.io/web_learn_react_solana/",
   "name": "token",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,8 @@
     "web-vitals": "^2.1.4",
     "@solana/spl-token": "0.2.0",
     "@solana/web3.js": "1.48.0",
-    "buffer": "6.0.3"
+    "buffer": "6.0.3",
+    "gh-pages" : "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
