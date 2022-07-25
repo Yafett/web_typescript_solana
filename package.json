@@ -21,7 +21,7 @@
     "@solana/wallet-adapter-wallets": "^0.15.3",
     "@solana/web3.js": "^1.31.0",
     "@tailwindcss/typography": "^0.5.0",
-    "@trufflesuite/bigint-buffer": "1.1.6",
+    "@trufflesuite/bigint-buffer": "1.1.10",
     "bigint-buffer": "1.1.5",
     "daisyui": "^1.24.3",
     "immer": "^9.0.12",
