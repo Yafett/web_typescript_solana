@@ -1,4 +1,3 @@
-
 import {
     clusterApiUrl,
     Connection,
@@ -17,10 +16,6 @@ import {
     getAccount
 } from '@solana/spl-token';
 import { FC } from 'react';
-
-window.Buffer = window.Buffer || require('buffer').Buffer;
-
-export default MintToken;
 
 export const MintToken: FC = () => {
     const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
@@ -54,7 +49,7 @@ export const MintToken: FC = () => {
         console.log(`Create Token Account: ${fromTokenAccount.address.toBase58()}`);
 
 
-    }
+    };
 
     async function mintToken() {
         // Mint 1 new token to the "fromTokenAccount" account we just created
@@ -72,7 +67,7 @@ export const MintToken: FC = () => {
         console.log(`Mint mint: ${mint}`);
         console.log(`Mint fromTokenAccout.address: ${fromTokenAccount.address}`);
         console.log(`Mint formWallet.publicKey: ${fromWallet.publicKey}}`);
-    }
+    };
 
     async function checkBalance() {
         // get the supply of tokens we have minted into existance
@@ -82,7 +77,7 @@ export const MintToken: FC = () => {
         // get the amount of tokens left in the account
         const tokenAccountInfo = await getAccount(connection, fromTokenAccount.address);
         console.log(tokenAccountInfo.amount);
-    }
+    };
 
     async function sendToken() {
         // Get the token account of the toWallet address, and if it does not exist, create it
@@ -98,20 +93,15 @@ export const MintToken: FC = () => {
             1000000000 // 1 billion
         );
         console.log(`finished transfer with ${signature}`);
-    }
-
-
+    };
 
     return (
         <div>
-            <p className="text-2xl text-white-600 font-bold mb-5">MINT TOKEN</p>
-
-            <div>
-                <button className='group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... ' onClick={createToken}>CREATE TOKEN</button>
-                <button className='group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... ' onClick={mintToken}>MINT TOKEN</button>
-                <button className='group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... ' onClick={checkBalance}>CHECK BALANCE</button>
-                <button className='group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... ' onClick={sendToken}>SEND TOKEN</button>
-            </div>
+            <button className="group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... " onClick={createToken} >Create Nft</button>
+            <button className="group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... " onClick={mintToken} >Mint Token</button>
+            <button className="group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... " onClick={checkBalance} >Check Balance</button>
+            <button className="group w-60 m-2 btn  bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... " onClick={sendToken} >Send Token</button>
+           
         </div>
-    )
-}
+    );
+};
