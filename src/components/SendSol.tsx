@@ -19,10 +19,10 @@ import {
     closeAccount
 } from '@solana/spl-token';
 import { connect } from 'http2';
+import { FC } from 'react';
 
-window.Buffer = window.Buffer || require('buffer').Buffer;
+export const SendSol: FC = () => {
 
-function SendSol() {
     const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
     const fromWallet = Keypair.generate();
     let mint: PublicKey;
@@ -72,7 +72,7 @@ function SendSol() {
         // console.log(associatedTokenAccount);
         // console.log(NATIVE_MINT.toBase58);
         console.log('LAMPORTS_PER_SOL : ' + LAMPORTS_PER_SOL);
-    }
+    };
 
     async function unwrapSol() {
         const walletBalance = await connection.getBalance(fromWallet.publicKey);
@@ -87,7 +87,7 @@ function SendSol() {
 
         const walletBalancePostClose = await connection.getBalance(fromWallet.publicKey);
         console.log(`Balance After Unwraping S0L : ${walletBalancePostClose}`)
-    }
+    };
 
     async function sendSol() {
         // airdrop SOL to send
@@ -120,7 +120,7 @@ function SendSol() {
             LAMPORTS_PER_SOL
         );
         console.log('Transfer tx:', signature);
-    }
+    };
 
     return (
         <div>
@@ -135,4 +135,3 @@ function SendSol() {
     );
 }
 
-export default SendSol;

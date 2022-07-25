@@ -15,10 +15,10 @@ import {
     createSetAuthorityInstruction,
     AuthorityType
 } from '@solana/spl-token';
+import { FC } from 'react';
 
-window.Buffer = window.Buffer || require('buffer').Buffer;
 
-function MintNft() {
+export const MintNft: FC = () => {
     const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
     const fromWallet = Keypair.generate();
     let mint: PublicKey;
@@ -49,7 +49,7 @@ function MintNft() {
         );
         console.log(`Create Token Account: ${fromTokenAccount.address.toBase58()}`);
 
-    }
+    };
 
     async function mintNft() {
         // Mint 1 new token to the "fromTokenAccount" account we just created
@@ -62,7 +62,7 @@ function MintNft() {
             10000000000 // 10 billion
         );
         console.log(`Mint signature: ${signature}`);
-    }
+    };
 
     async function lockNft() {
         // Create our transaction to change minting permissions
@@ -76,7 +76,8 @@ function MintNft() {
         // Send transaction
         const signature = await sendAndConfirmTransaction(connection, transaction, [fromWallet]);
         console.log(`Lock signature: ${signature}`);
-    }
+    };
+
     return (
         <div>
             <div>

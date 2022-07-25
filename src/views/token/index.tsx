@@ -4,6 +4,9 @@
 import { FC } from 'react';
 import { SignMessage } from 'components/SignMessage';
 import { MintToken } from 'components/MintToken';
+import { MintNft } from 'components/MintNft';
+import { SendSol } from 'components/SendSol';
+
 
 export const TokenView: FC = ({ }) => {
 
@@ -19,14 +22,10 @@ export const TokenView: FC = ({ }) => {
             <MintToken />
           </div>
           <div className=" mx-auto bg-primary p-8 my-2 rounded-lg mb-6">
-            {/* <MintNft /> */}
-            <SignMessage />
-
+            <MintNft />
           </div>
           <div className=" mx-auto bg-primary p-8 my-2 rounded-lg mb-6">
-          <SignMessage />
-
-            {/* <SendSol /> */}
+            <SendSol />
           </div>
 
         </div>
