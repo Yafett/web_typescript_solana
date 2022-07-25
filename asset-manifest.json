@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/web_learn_react_solana/static/css/main.073c9b0a.css",
+    "main.js": "/web_learn_react_solana/static/js/main.cd8962aa.js",
+    "static/js/787.9d984562.chunk.js": "/web_learn_react_solana/static/js/787.9d984562.chunk.js",
+    "index.html": "/web_learn_react_solana/index.html",
+    "main.073c9b0a.css.map": "/web_learn_react_solana/static/css/main.073c9b0a.css.map",
+    "main.cd8962aa.js.map": "/web_learn_react_solana/static/js/main.cd8962aa.js.map",
+    "787.9d984562.chunk.js.map": "/web_learn_react_solana/static/js/787.9d984562.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cd8962aa.js"
+  ]
+}
