@@ -23,7 +23,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "@trufflesuite/bigint-buffer": "1.1.6",
     "bigint-buffer": "1.1.5",
-    "daisyui": "^1.24.3",
+    "daisyui": "^2.51.1",
     "immer": "^9.0.12",
     "next": "12.0.8",
     "next-compose-plugins": "^2.2.1",
